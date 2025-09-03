@@ -30,7 +30,8 @@ func NewLimit(price float64) *Limit {
 	}
 }
 
-func (l *Limit) AddOrder(o *Order) { // how to read this, addOrder is a method of Limit
+func (l *Limit) AddOrder(o *Order) {
+	// how to read this, addOrder is a method of Limit
 	o.Limit = l
 	l.Orders = append(l.Orders, o)
 	l.TotalVolume += o.Size
